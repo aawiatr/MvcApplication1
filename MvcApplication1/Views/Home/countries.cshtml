@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "countries";
+}
+
+<h2>countries</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Continent</th>
+        <th>Code</th>
+        <th>Link</th>
+
+    </tr>
+
+    @foreach (var item in ViewBag.MyList.OfficialLanguageList)
+    {
+            <tr>
+                <td>@item.Name.ToString()</td>
+                <td>@item.Continent.ToString()</td>
+                <td style="text-align:right">@item.Code.ToString()</td>
+                <td><a href="~/Home/country/@item.Code.ToString()">@item.Code.ToString()</a></td>
+            </tr>
+    }
+</table>
+
+
+
+
